@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,18 +8,20 @@
     <link rel="stylesheet" href="./style.css">
     <title>Beat Maker</title>
 </head>
+
 <body>
     <div class="sequencer">
         <div class="kick-track">
             <div class="controls">
                 <h1>Kick</h1>
-                <button data-track = '0' class="mute kick-volume">
+                <button data-track='0' class="mute kick-volume">
                     <i class="fas fa-volume-mute"></i>
                 </button>
                 <select name="kick-select" id="kick-select">
                     <option value="./src/allSounds/kick-classic.wav">Classic Kick</option>
                     <option value="./src/allSounds/kick-808.wav">808 Kick</option>
                     <option value="./src/allSounds/kick-heavy.wav">Kick Heavy</option>
+                    <option value="./src/allSounds/kick-softy.wav">Kick Softy</option>
                 </select>
             </div>
             <div class="kick">
@@ -35,7 +38,7 @@
         <div class="snare-track">
             <div class="controls">
                 <h1>Kick</h1>
-                <button data-track = '1' class="mute snare-volume">
+                <button data-track='1' class="mute snare-volume">
                     <i class="fas fa-volume-mute"></i>
                 </button>
                 <select name="snare-select" id="snare-select">
@@ -58,7 +61,7 @@
         <div class="hihat-track">
             <div class="controls">
                 <h1>Hihat</h1>
-                <button data-track = '2' class="mute hihat-volume">
+                <button data-track='2' class="mute hihat-volume">
                     <i class="fas fa-volume-mute"></i>
                 </button>
                 <select name="hihat-select" id="hihat-select">
@@ -78,13 +81,18 @@
             </div>
         </div>
         <button class="play">Play</button>
+        <div class="tempo">
+            <input type="range" class="tempo-slider" max="300" min="20" value="150">
+            <p>Tempo: <span class="tempo-nr">150</span></p>
+        </div>
     </div>
-  
     <audio class="kick-sound" src="./src/allSounds/kick-classic.wav"></audio>
     <audio class="snare-sound" src="./src/allSounds/snare-acoustic01.wav"></audio>
     <audio class="hihat-sound" src="./src/allSounds/hihat-acoustic01.wav"></audio>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js" integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/js/all.min.js"
+        integrity="sha512-UwcC/iaz5ziHX7V6LjSKaXgCuRRqbTp1QHpbOJ4l1nw2/boCfZ2KlFIqBUA/uRVF0onbREnY9do8rM/uT/ilqw=="
+        crossorigin="anonymous"></script>
     <script src="./app.js"></script>
 </body>
+
 </html>
