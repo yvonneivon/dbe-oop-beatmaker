@@ -14,10 +14,6 @@ svg {
     pointer-events: none;
 }
 
-
-
-
-
 .kick-pad,
 .snare-pad,
 .hihat-pad {
@@ -30,30 +26,19 @@ svg {
     border-radius: 0.3rem;
 }
 
-
 .kick-pad.active {
-
     background: linear-gradient(30deg, rgb(83, 176, 157)60%, rgba(255, 255, 255, 1)100%);
     box-shadow: none;
-
-
 }
 
-
-
-
 .snare-pad.active {
-
     background: linear-gradient(30deg, rgb(159, 133, 200)60%, rgba(255, 255, 255, 1)100%);
     box-shadow: none;
-
 }
 
 .hihat-pad.active {
-
     background: linear-gradient(30deg, rgb(97, 132, 176)60%, rgba(255, 255, 255, 1)100%);
     box-shadow: none;
-
 }
 
 .sequencer {
@@ -73,7 +58,6 @@ svg {
     justify-content: space-between;
 
 }
-
 .kick,
 .snare,
 .hihat {
@@ -96,7 +80,6 @@ svg {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.5s ease;
-
     border-radius: 0.3rem;
 }
 
@@ -105,18 +88,14 @@ svg {
     box-shadow: 0 5px 15px rgba(128, 128, 128, 0.4);
 }
 
-
-
 .pad {
     transition: all 0.5s ease;
 
 }
 
 select {
-
     border: none;
     text-decoration: none;
-
     background: rgb(128, 128, 128);
     color: rgba(255, 255, 255, 0.8);
     padding: 0.5rem 1rem;
@@ -125,7 +104,6 @@ select {
     font-size: 1rem;
     -webkit-appearance: none;
 }
-
 
 .play {
     padding: 0.5rem 1rem;
