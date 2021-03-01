@@ -2,10 +2,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 body {
-    font-family: sans-serif;
+    background: rgb(230, 216, 226);
 }
 
 i,
@@ -13,37 +14,46 @@ svg {
     pointer-events: none;
 }
 
+
+
+
+
 .kick-pad,
 .snare-pad,
 .hihat-pad {
     width: 4rem;
     height: 4rem;
-    margin: 1rem 0.5rem;
+    margin: 1.5rem 0.5rem;
     cursor: pointer;
+    box-shadow: 0 8px 6px -6px gray;
+    background: linear-gradient(30deg, rgba(230, 216, 226, 1) 60%, rgba(255, 255, 255, 1) 100%);
+    border-radius: 0.3rem;
 }
 
-.kick-pad {
-    background: blue;
-}
-
-.snare-pad {
-    background: blueviolet;
-}
-
-.hihat-pad {
-    background: orange;
-}
 
 .kick-pad.active {
-    background: rgb(88, 88, 208);
+
+    background: linear-gradient(30deg, rgb(83, 176, 157)60%, rgba(255, 255, 255, 1)100%);
+    box-shadow: none;
+
+
 }
 
+
+
+
 .snare-pad.active {
-    background: rgb(157, 105, 205);
+
+    background: linear-gradient(30deg, rgb(159, 133, 200)60%, rgba(255, 255, 255, 1)100%);
+    box-shadow: none;
+
 }
 
 .hihat-pad.active {
-    background: rgb(156, 139, 110);
+
+    background: linear-gradient(30deg, rgb(97, 132, 176)60%, rgba(255, 255, 255, 1)100%);
+    box-shadow: none;
+
 }
 
 .sequencer {
@@ -59,9 +69,9 @@ svg {
 .hihat-track {
     display: flex;
     align-items: center;
-    width: 90%;
+    width: 80%;
     justify-content: space-between;
-    margin-top: 4rem;
+
 }
 
 .kick,
@@ -79,35 +89,67 @@ svg {
 }
 
 .controls button {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
     border: none;
-    background: gray;
-    color: white;
+    background: rgb(128, 128, 128);
+    color: rgba(255, 255, 255, 0.8);
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.5s ease;
+
+    border-radius: 0.3rem;
 }
+
+.controls button:hover {
+    color: rgb(245, 245, 245, 1);
+    box-shadow: 0 5px 15px rgba(128, 128, 128, 0.4);
+}
+
+
 
 .pad {
     transition: all 0.5s ease;
+
 }
+
+select {
+
+    border: none;
+    text-decoration: none;
+
+    background: rgb(128, 128, 128);
+    color: rgba(255, 255, 255, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    font-size: 1rem;
+    -webkit-appearance: none;
+}
+
 
 .play {
     padding: 0.5rem 1rem;
     font-size: 1rem;
-    background: gray;
-    color: whitesmoke;
+    background: rgb(128, 128, 128);
+    color: rgba(255, 255, 255, 0.8);
     border: none;
     cursor: pointer;
     margin-top: 1.5rem;
+    transition: all 0.2s ease-in-out;
+    border-radius: 0.3rem;
+}
+
+.play:hover {
+    color: rgb(245, 245, 245, 1);
+    box-shadow: 0 5px 15px rgba(128, 128, 128, 0.4);
 }
 
 .mute.active {
-    background: rgb(168, 167, 167);
+    background: rgb(128, 128, 128);
 }
 
 .tempo {
-    margin: 3rem;
+    margin: 1.5rem;
     width: 30%;
 }
 
@@ -117,14 +159,19 @@ svg {
     margin: 1rem 0rem;
     width: 100%;
     position: relative;
-    background: rgb(88, 88, 208);
+    background: rgb(128, 128, 128);
     cursor: pointer;
     border-radius: 1rem;
+
+}
+
+.tempo-slider:hover {
+    box-shadow: 0 5px 15px rgba(128, 128, 128, .4);
 }
 
 .tempo p {
     font-size: 1.5rem;
-    margin: 2rem;
+    margin: 0.5rem;
     text-align: center;
 }
 

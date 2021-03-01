@@ -32,9 +32,11 @@ class DrumKit {
                     this.kickAudio.play();
                 }
                 if (bar.classList.contains('snare-pad')) {
+                    this.snareAudio.currentTime = 0;
                     this.snareAudio.play();
                 }
                 if (bar.classList.contains('hihat-pad')) {
+                    this.hihatAudio.currentTime = 0;
                     this.hihatAudio.play();
                 }
             }
@@ -45,14 +47,14 @@ class DrumKit {
     start() {
         const interval = (60 / this.bpm) * 1000;
         //check if it's playing
-        if (!this.isPlaying) {
+        if (this.isPlaying) {
+            //clear interval
+            clearInterval(this.isPlaying);
+            this.isPlaying = null;
+        } else {
             this.isPlaying = setInterval(() => {
                 this.repeat();
             }, interval);
-        } else {
-            //clear the interval
-            clearInterval(this.isPlaying);
-            this.isPlaying = null;
         }
     }
     updateBtn() {
@@ -67,7 +69,7 @@ class DrumKit {
     changeSound(e) {
         const selectionNames = e.target.name;
         const selectionValue = e.target.value;
-        switch (selectionNames) {
+        switch (selectionName) {
             case 'kick-select':
                 this.kickAudio.src = selectionValue;
                 break;
@@ -96,7 +98,7 @@ class DrumKit {
 
             }
         } else {
-            switch (this.mute) {
+            switch (muteIndex) {
                 case '0':
                     this.kickAudio.volume = 1;
                     break;
